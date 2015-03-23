@@ -1,0 +1,14 @@
+input
+3 3
+aaaaa
+caaaa
+acacaca
+aabaa
+ccacacc
+caaac
+caaac
+
+output
+YES
+NO
+YES
