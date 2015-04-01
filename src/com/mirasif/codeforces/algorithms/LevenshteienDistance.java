@@ -1,4 +1,4 @@
-package com.mirasif.codeforces.Algorithms;
+package com.mirasif.codeforces.algorithms;
 
 /**
  * @author asif.hossain

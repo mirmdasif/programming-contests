@@ -1,6 +1,6 @@
 package com.mirasif.codeforces;
 
-import com.mirasif.codeforces.Algorithms.LevenshteienDistance;
+import com.mirasif.codeforces.datastructure.TernaryTrie;
 
 import java.io.*;
 
@@ -15,6 +15,15 @@ public class Main {
     private void printOutPut(){}
 
     public static void main(String args[]) throws IOException {
+
+        TernaryTrie trie = new TernaryTrie();
+        
+        trie.add("aab");
+        trie.add("abbaac");
+
+        System.out.println(trie.contains("aaa"));
+        System.out.println(trie.contains("aa"));
+        System.out.println(trie.contains("abbaac"));
 
     }
 }
