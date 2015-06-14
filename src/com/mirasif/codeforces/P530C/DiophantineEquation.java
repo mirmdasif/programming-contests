@@ -1,4 +1,4 @@
-package P530C;
+package com.mirasif.codeforces.P530C;
 
 import java.io.BufferedReader;
 import java.io.IOException;
