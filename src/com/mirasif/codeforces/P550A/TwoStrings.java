@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 
-public class Main {
+public class TwoStrings {
 
     String str;
     
@@ -50,7 +50,7 @@ public class Main {
 
 
     public static void main(String[] args) throws IOException {
-        Main m = new Main();
+        TwoStrings m = new TwoStrings();
         m.parseInput();
         m.solve();
         m.printOutPut();

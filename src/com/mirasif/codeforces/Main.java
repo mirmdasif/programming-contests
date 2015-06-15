@@ -1,29 +1,25 @@
 package com.mirasif.codeforces;
 
-import com.mirasif.codeforces.datastructure.TernaryTrie;
-
-import java.io.*;
-
 /**
  * @author asif.hossain
  * @since 3/1/15
  */
 public class Main {
-    
-    private void parseInput(){}
-    private void solve(){}
-    private void printOutPut(){}
 
-    public static void main(String args[]) throws IOException {
+    private void parseInput() {
+    }
 
-        TernaryTrie trie = new TernaryTrie();
+    private void solve() {
+    }
+
+    private void printOutPut() {
+    }
+
+    public static void main(String args[]) {
+        Main main = new Main();
         
-        trie.add("aab");
-        trie.add("abbaac");
-
-        System.out.println(trie.contains("aaa"));
-        System.out.println(trie.contains("aa"));
-        System.out.println(trie.contains("abbaac"));
-
+        main.parseInput();
+        main.solve();
+        main.printOutPut();
     }
 }
