@@ -18,7 +18,7 @@ public class DivisibilityByEight {
     }
 
     private void solve() {
-//        bfs(numberString);
+//      bfs(numberString);
         
 //      for (int i = 1; i <= numberString.length(); i++) {
 //          dfs(numberString,i);
@@ -29,30 +29,28 @@ public class DivisibilityByEight {
     
     void iterativeSolution(String str) {
         for (int i = 0; i < str.length(); i++) {
-//            if ( str.charAt(i) == '0') {
-//                continue;
-//            }
-            String str1 = str.charAt(i)+"";
-            for (int j = 0; j < str.length(); j++) {
-                String str2 = new String(str1);
-                if (j != i) {
-                    str2 += str.charAt(j);
+            if (Integer.parseInt(""+str.charAt(i)) % 8 == 0) {
+                System.out.println("YES");
+                System.out.println(str.charAt(i));
+                return;
+            }
+            for (int j = i+1; j < str.length(); j++) {
+                if (Integer.parseInt("" + str.charAt(i) + "" + str.charAt(j)) % 8 == 0) {
+                    System.out.println("YES");
+                    System.out.println(str.charAt(i) + "" + str.charAt(j));
+                    return;
                 }
-                for (int k = 0; k < str.length(); k++) {
-                    String str3 = new String(str2);
-                    if ( k != j && k != i) {
-                        str3 += str.charAt(k);
-                    }
-//                    System.out.println(str3);
-                    if (checkDivisibility(str3)) {
+                for (int k = j + 1; k < str.length(); k++) {
+                    if (Integer.parseInt(""+str.charAt(i) + "" + str.charAt(j) + "" + str.charAt(k)) % 8 == 0) {
                         System.out.println("YES");
-                        System.out.println(str3);
+                        System.out.println(""+str.charAt(i) + "" + str.charAt(j) + "" + str.charAt(k));
                         return;
                     }
                 }
             }
         }
         System.out.println("NO");
+        
     }
     
     void dfs(String str, int depth) {
