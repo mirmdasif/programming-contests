@@ -21,5 +21,6 @@ public class Main {
         main.parseInput();
         main.solve();
         main.printOutPut();
+
     }
 }

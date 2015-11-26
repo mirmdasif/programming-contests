@@ -125,6 +125,9 @@ public class DivisibilityByEight {
         main.parseInput();
         main.solve();
         main.printOutPut();
+        
+        
+        
 
     }
 }
