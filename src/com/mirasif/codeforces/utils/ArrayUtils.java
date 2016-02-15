@@ -22,6 +22,13 @@ public class ArrayUtils {
         System.out.println();
     }
     
+    public static void printArray(String[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + "\t");
+        }
+        System.out.println();
+    }
+    
     public static void main() {
         
     }
