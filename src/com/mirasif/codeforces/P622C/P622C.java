@@ -1,8 +1,5 @@
 package com.mirasif.codeforces.P622C;
 
-
-import com.mirasif.codeforces.utils.ArrayUtils;
-
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -35,8 +32,7 @@ public class P622C {
             mappings[i] = leftPos;
 
         }
-//        ArrayUtils.printArray(numbers);
-//        ArrayUtils.printArray(mappings);
+
         for (int i = 1; i <= m; i++) {
             line = reader.readLine();
             int l = Integer.parseInt(line.split("\\s")[0]);
