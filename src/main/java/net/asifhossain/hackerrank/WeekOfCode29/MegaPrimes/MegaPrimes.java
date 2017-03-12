@@ -1,4 +1,4 @@
-package net.asifhossain.hackerrank.MegaPrimes;
+package net.asifhossain.hackerrank.WeekOfCode29.MegaPrimes;
 
 import java.math.BigInteger;
 import java.util.HashMap;

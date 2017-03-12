@@ -1,4 +1,4 @@
-package net.asifhossain.hackerrank.DistanceToPie;
+package net.asifhossain.hackerrank.WeekOfCode29.DistanceToPie;
 import java.util.Scanner;
 
 /**
