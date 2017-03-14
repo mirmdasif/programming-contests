@@ -13,6 +13,8 @@ public class Solution {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        long C_48_24 = 32247603683100l;
+
         int teamA = sc.nextInt();
         int teamB = sc.nextInt();
 
@@ -27,8 +29,8 @@ public class Solution {
         long result;
 
         if(winner > 25) {
-            result = (Combination.binomialCoefficient(48, 24) % 1000000007);
-            result = (result * pow(2, looser - 24, 1000000007)) % 1000000007;
+            result = C_48_24 % 1000000007;
+            result = (result * pow(looser - 24)) % 1000000007;
         } else {
             result = Combination.binomialCoefficient(winner + looser - 1, looser) % 1000000007;
         }
@@ -36,12 +38,15 @@ public class Solution {
         System.out.println(result);
     }
 
-    static long pow(int n, int k, int mod) {
-        long result = 1L;
+    static long pow(int pow) {
+        long result = 1l;
 
-        for (int i = 0; i < k; i++) {
-            result = (result * n) % mod;
+        while (pow > 63) {
+            result = ((long) (Math.pow(2, 63) % 1000000007) * result) % 1000000007;
+            pow = pow - 63;
         }
+
+        result = ((long) (Math.pow(2, pow) % 1000000007) * result) % 1000000007;
 
         return result;
     }
