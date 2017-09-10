@@ -6,26 +6,31 @@ import java.util.Map;
 class Solution {
     public int lengthOfLongestSubstring(String s) {
 
-        for (int subStringLength = s.length(); subStringLength >= 1; subStringLength--) {
-            for (int startIndex = 0; startIndex + subStringLength - 1 < s.length(); startIndex++) {
-                if (test(s, startIndex, startIndex + subStringLength - 1)) {
-                    return subStringLength;
+        Map<Character, Integer> charIndex = new HashMap<>();
+        int maxLength = 0;
+        int currentLength = 0;
+        int startOfCurrent = 0;
+        for (int i = 0; i < s.length(); i++) {
+
+            char ch = s.charAt(i);
+
+            if (charIndex.get(ch) == null) {
+                currentLength++;
+            } else {
+                for (int j = startOfCurrent, l = charIndex.get(ch); j <= l; j++) {
+                    charIndex.remove(s.charAt(j));
+                    startOfCurrent++;
                 }
+
+                currentLength = i - startOfCurrent + 1;
+
             }
+
+            charIndex.put(s.charAt(i), i);
+            maxLength = Math.max(currentLength, maxLength);
         }
 
-        return 0;
+        return maxLength;
 
-    }
-
-    private boolean test(String s, int startIndex, int endIndex) {
-        Map<Character, Boolean> map = new HashMap<>();
-
-        for (int i = startIndex; i <= endIndex; i++) {
-            if (map.get(s.charAt(i)) != null) return false;
-            map.put(s.charAt(i), true);
-        }
-
-        return true;
     }
 }
