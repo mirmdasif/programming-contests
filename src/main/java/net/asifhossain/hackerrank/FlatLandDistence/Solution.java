@@ -1,5 +1,6 @@
 package net.asifhossain.hackerrank.FlatLandDistence;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Solution {
@@ -16,23 +17,40 @@ public class Solution {
         }
 
         for(int c_i=0; c_i < m; c_i++){
-            c[c_i] = in.nextInt();
+            c[in.nextInt()] = 1;
+        }
+
+        Integer currentStation = null;
+
+        for (int i = 0; i < n; i++) {
+            if(c[i] == 1) {
+                currentStation = i;
+            }
+
+            if(currentStation != null) {
+                d[i] = Math.min(i - currentStation, d[i]);
+            }
+        }
+
+        currentStation = null;
+
+        for (int i = n - 1; i >= 0; i--) {
+            if(c[i] == 1) {
+                currentStation = i;
+            }
+
+            if(currentStation != null) {
+                d[i] = Math.min(currentStation - i, d[i]);
+            }
         }
 
         int maxDistance = Integer.MIN_VALUE;
 
         for (int i = 0; i < n; i++) {
-
-            int distence = Integer.MAX_VALUE;
-
-            for (int j = 0; j < m; j++) {
-                distence = Math.min(Math.abs(i - c[j]), distence);
-            }
-
-            maxDistance = Math.max(distence, maxDistance);
+            maxDistance = Math.max(maxDistance, d[i]);
         }
 
-
         System.out.println(maxDistance);
+        System.out.println(Arrays.toString(d));
     }
 }
