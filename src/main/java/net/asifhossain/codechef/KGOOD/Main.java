@@ -10,7 +10,7 @@ import java.util.Arrays;
  * @author asif.hossain
  * @since 11/27/16.
  */
-public class Solution {
+public class Main {
     public static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     public static BufferedOutputStream writer = new BufferedOutputStream(System.out);
 
@@ -33,7 +33,6 @@ public class Solution {
             Arrays.sort(frequency);
 
 
-
             int min = 0;
             for (int i = 0; i < frequency.length; i++) {
                 if (frequency[i] != 0) {
@@ -45,7 +44,7 @@ public class Solution {
 
             int count = 0;
             for (int i = 0; i < frequency.length; i++) {
-                if(frequency[i] - min > k) {
+                if (frequency[i] - min > k) {
                     count += frequency[i] - min - k;
                 }
             }
