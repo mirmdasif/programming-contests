@@ -59,8 +59,6 @@ class SegmentTree {
 
     public static void main(String[] args) {
         net.asifhossain.datastructure.SegmentTree.SegmentTree tree = new net.asifhossain.datastructure.SegmentTree.SegmentTree(new int[] {3, 1, 2, 0, 4, 5});
-        ArrayUtils.printArray(tree.);
-
         System.out.println(tree.rmq(0, 0));
     }
 }
