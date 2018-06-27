@@ -1,4 +1,4 @@
-package net.asifhossain.leetcode.P477;
+package net.asifhossain.leetcode.P0477;
 
 /**
  * @author asif.hossain

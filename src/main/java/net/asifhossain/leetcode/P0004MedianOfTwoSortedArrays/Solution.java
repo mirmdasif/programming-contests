@@ -1,4 +1,4 @@
-package net.asifhossain.leetcode.P04MedianOfTwoSortedArrays;
+package net.asifhossain.leetcode.P0004MedianOfTwoSortedArrays;
 
 import net.asifhossain.codeforces.utils.ArrayUtils;
 

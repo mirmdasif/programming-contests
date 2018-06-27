@@ -1,4 +1,4 @@
-package net.asifhossain.leetcode.P002;
+package net.asifhossain.leetcode.P0002;
 
 class ListNode {
     int val;

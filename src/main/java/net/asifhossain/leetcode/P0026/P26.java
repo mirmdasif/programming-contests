@@ -1,4 +1,4 @@
-package net.asifhossain.leetcode;
+package net.asifhossain.leetcode.P0026;
 
 public class P26 {
     class Solution {

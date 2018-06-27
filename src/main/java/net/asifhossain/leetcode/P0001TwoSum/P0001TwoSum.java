@@ -1,9 +1,9 @@
-package net.asifhossain.leetcode;
+package net.asifhossain.leetcode.P0001TwoSum;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class P1TwoSum {
+public class P0001TwoSum {
     class Solution {
         public int[] twoSum(int[] nums, int target) {
             Map<Integer, Integer> indexMap = new HashMap<>();

@@ -1,3 +1,5 @@
+package net.asifhossain.hackerrank.BirthdayCakeCandles;
+
 import java.io.*;
 import java.math.*;
 import java.security.*;
@@ -6,7 +8,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
 
-public class Solution {
+public class BirthdayCakeCandles {
 
     // Complete the birthdayCakeCandles function below.
     static long birthdayCakeCandles(int[] a) {
