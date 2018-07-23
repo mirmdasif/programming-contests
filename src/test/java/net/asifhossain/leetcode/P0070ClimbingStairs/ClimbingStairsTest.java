@@ -5,10 +5,20 @@ import org.junit.Test;
 
 public class ClimbingStairsTest {
 
+    private ClimbingStairs climbingStairs = new ClimbingStairs();
+
     @Test
     public void climbStairs() {
-        ClimbingStairs climbingStairs = new ClimbingStairs();
-
         Assert.assertEquals(3, climbingStairs.climbStairs(3));
+    }
+
+    @Test
+    public void climbStairsDp() {
+        Assert.assertEquals(3, climbingStairs.climbStairsDp(3));
+    }
+
+    @Test
+    public void climbStairsFib() {
+        Assert.assertEquals(3, climbingStairs.climbStairsFib(3));
     }
 }
