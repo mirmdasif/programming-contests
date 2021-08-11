@@ -1,4 +1,4 @@
-package net.asifhossain.P0119Pascal2
+package net.asifhossain.leetcode.P0119Pascal2
 
 class Solution {
     fun getRow(rowIndex: Int): List<Int> {
