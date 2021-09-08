@@ -28,7 +28,7 @@ fun miniMaxSum(arr: Array<Int>): Unit {
     var min = Int.MAX_VALUE
     var max = Int.MIN_VALUE
     
-    var sum = 0
+    var sum = 0L
     
     for (number in arr) {
         if (number < min) min = number
