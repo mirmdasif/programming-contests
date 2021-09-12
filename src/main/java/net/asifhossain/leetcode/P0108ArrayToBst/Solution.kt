@@ -1,6 +1,5 @@
 package net.asifhossain.leetcode.P0108ArrayToBst
 
-import com.sun.xml.internal.fastinfoset.util.StringArray
 
 class TreeNode(val value:  Int) {
     var left: TreeNode? = null
@@ -8,10 +7,6 @@ class TreeNode(val value:  Int) {
 }
 
 class Solution {
-
-    fun main(args: StringArray) {
-
-    }
 
     fun sortedArrayToBST(nums: IntArray): TreeNode? = makeBst(nums, 0, nums.size -1)
 
